@@ -1,0 +1,21 @@
+1)pip upgrade
+easy_install -U pip
+2)셋업툴 업그레이드
+python -m pip install -U pip setuptools
+3)win32에러발생시
+pip install pypiwin32
+4)pip install scrapy
+----------------------------에러시 조치법
+
+---------------------------------------
+스크래피:프레임워크
+1)프로젝트 생성
+scrapy startproject 프로젝트명
+scrapy startproject find1
+2)스파이더 생성
+cd find1 #scrapy.cfg파일이 있는곳에서 명령어 실행
+scrapy genspider 이름 수집할사이트
+scrapy genspider test1 10000recipe.com
+3)실행
+scrapy crawl test1 #test1.py의 name값
+scrapy crawl test1 --nolog #nolog로 인해서 실행 과정은 안나오고 print한 값만 나옴
